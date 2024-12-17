@@ -162,5 +162,7 @@ builder.defineStreamHandler(async (args) => {
 });
 
 // Pokretanje servera
-serveHTTP(builder.getInterface(), { host: '0.0.0.0', port: 7000 });  // Ovdje menjamo host na "0.0.0.0"
+// Promeni host na 0.0.0.0 kako bi omogućio pristup spoljnim uređajima
+serveHTTP(builder.getInterface(), { host: '0.0.0.0', port: 7000 });  
 console.log("Addon running on http://0.0.0.0:7000");
+
