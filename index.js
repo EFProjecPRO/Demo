@@ -161,6 +161,6 @@ builder.defineStreamHandler(async (args) => {
     return { streams: [] };
 });
 
-// Pokretanje servera server je obican
-serveHTTP(builder.getInterface(), { port: 7000 });
-console.log("Addon running on http://localhost:7000");
+// Pokretanje servera
+serveHTTP(builder.getInterface(), { port: 7000, host: "0.0.0.0" });  // Ovdje menjamo host na "0.0.0.0"
+console.log("Addon running on http://0.0.0.0:7000");
